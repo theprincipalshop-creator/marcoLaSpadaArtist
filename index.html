@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco La Spada Artist | Portfolio & Preventivi d'Arte</title>
+    <meta name="description" content="Benvenuto nel mio spazio creativo. Sono Marco, realizzo quadri e manufatti personalizzati a Biella. Contattami per trasformare la tua idea in realtà.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#07070a">
+    <link rel="canonical" href="https://marcolaspadaartist.it/">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marcolaspadaartist.it/">
+    <meta property="og:title" content="Marco La Spada Artist | Arte e Artigianato">
+    <meta property="og:description" content="Benvenuto nel mio spazio creativo. Sono Marco, realizzo quadri e manufatti personalizzati a Biella. Contattami per trasformare la tua idea in realtà.">
+    <meta property="og:image" content="assets/sfondohero.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marco La Spada Artist | Arte e Artigianato">
+    <meta name="twitter:description" content="Quadri e manufatti personalizzati a Biella. Contattami per il tuo progetto.">
+    <meta name="twitter:image" content="assets/sfondohero.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Marco La Spada Artist",
+      "url": "https://marcolaspadaartist.it/",
+      "image": "assets/sfondohero.png",
+      "description": "Opere d'arte personalizzate, murales, lavorazioni in legno e manufatti artigianali a Biella.",
+      "telephone": "+393341061973",
+      "email": "marcolaspadaartist@gmail.com",
+      "sameAs": [
+        "https://www.instagram.com/marco_artist_/",
+        "https://www.tiktok.com/@marco_artist_"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Biella",
+        "addressCountry": "IT"
+      }
+    }
+    </script>
+
+    <!-- Preload hero background (LCP optimization) -->
+    <link rel="preload" as="image" href="assets/sfondohero.webp" type="image/webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Floating CTA (solo mobile) -->
+    <a href="#" class="floating-cta" id="floating-cta-btn" aria-label="Richiedi un preventivo">
+        <i class="fa-solid fa-palette"></i>
+    </a>
+
+    <!-- Sfondo con particelle/effetto mesh (via CSS) -->
+    <div class="mesh-gradient"></div>
+
+    <!-- Header & Navbar -->
+    <header id="main-header">
+        <div class="nav-container">
+            <a href="#" class="logo" aria-label="Torna in cima">
+                <picture>
+                    <source srcset="assets/logo.webp" type="image/webp">
+                    <img src="assets/logo.png" alt="Marco La Spada Artist Logo" class="brand-logo-img" width="40" height="40">
+                </picture>
+                MARCO LA SPADA <span>ARTIST</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#portfolio" class="nav-link">Opere</a>
+                <a href="#wip" class="nav-link">WIP</a>
+                <a href="#biografia" class="nav-link">Storia</a>
+                <a href="#pronta-consegna" class="nav-link">Disponibili</a>
+                <a href="#contatti" class="nav-link">Contatti</a>
+                <button class="btn btn-primary btn-quote-trigger" id="nav-quote-btn">Richiedi Preventivo</button>
+            </nav>
+            <div class="hamburger" id="hamburger-menu" aria-label="Apri menu" aria-expanded="false" role="button" tabindex="0">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sezione Home (Hero) -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tag">pittura e manufatti</div>
+                <h1 class="hero-title">
+                    L'arte che prende forma
+                </h1>
+                <p class="hero-description">
+                    Benvenuto nel mio spazio creativo.<br>
+                    Sono Marco, realizzo quadri e manufatti personalizzati.<br>
+                    Contattami per trasformare la tua idea in realtà.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary-gradient"><i class="fa-solid fa-compass"></i> Guarda i
+                        miei lavori</a>
+                    <button class="btn btn-secondary btn-quote-trigger"><i class="fa-solid fa-file-invoice-dollar"></i>
+                        Parlami del tuo progetto</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="scroll-indicator">
+            <a href="#portfolio">
+                <span>Scorri per scoprire di più</span>
+                <i class="fa-solid fa-chevron-down bounce"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- SEZIONE PORTFOLIO (LE MIE CREAZIONI) -->
+    <section id="portfolio" class="portfolio-section section-with-bg bg-lines-diagonal">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Il mio Portfolio</span>
+                <h2 class="section-title">Quello che creo</h2>
+                <div class="divider"><span></span></div>
+            </div>
+
+            <!-- PARTE PITTORICA -->
+            <div class="category-section">
+                <h3 class="category-section-title">arte pittorica <span class="subtitle-inline">| tele, pareti ed altre
+                        superfici</span></h3>
+                <div class="category-grid" id="grid-pittorica">
+                    <!-- Quadri b/n ritratti persone -->
+                    <div class="portfolio-item category-box reveal-element" data-cat="persone">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-container">
+                                <picture>
+                                    <source srcset="fotoOpere/persone/copertinaPersone.webp" type="image/webp">
+                                    <img src="fotoOpere/persone/copertinaPersone.jpg" alt="Quadri B/N Persone"
+                                        class="portfolio-img" loading="lazy" width="400" height="300">
+                                </picture>
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-actions">
+                                        <button class="btn-icon btn-zoom"><i class="fa-solid fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-details">
+                                <h3>persone</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quadri b/n ritratti animali -->
+                    <div class="portfolio-item category-box reveal-element" data-cat="animali">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-container">
+                                <picture>
+                                    <source srcset="fotoOpere/animali/copertinaAnimali.webp" type="image/webp">
+                                    <img src="fotoOpere/animali/copertinaAnimali.jpg" alt="Quadri B/N Animali"
+                                        class="portfolio-img" loading="lazy" width="400" height="300">
+                                </picture>
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-actions">
+                                        <button class="btn-icon btn-zoom"><i class="fa-solid fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-details">
+                                <h3>animali</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quadri a colori -->
+                    <div class="portfolio-item category-box reveal-element" data-cat="quadriColori">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-container">
+                                <picture>
+                                    <source srcset="fotoOpere/quadriColori/copertinaColori.webp" type="image/webp">
+                                    <img src="fotoOpere/quadriColori/copertinaColori.jpg" alt="Quadri a Colori"
+                                        class="portfolio-img" loading="lazy" width="400" height="300">
+                                </picture>
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-actions">
+                                        <button class="btn-icon btn-zoom"><i class="fa-solid fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-details">
+                                <h3>quadri a colori</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pareti interno/esterno -->
+                    <div class="portfolio-item category-box reveal-element" data-cat="pareti">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-container">
+                                <picture>
+                                    <source srcset="fotoOpere/pareti/copertinaPareti.webp" type="image/webp">
+                                    <img src="fotoOpere/pareti/copertinaPareti.jpg" alt="Pareti interno/esterno"
+                                        class="portfolio-img" loading="lazy" width="400" height="300">
+                                </picture>
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-actions">
+                                        <button class="btn-icon btn-zoom"><i class="fa-solid fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-details">
+                                <h3>pareti interno/esterno</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tecnica mista -->
+                    <div class="portfolio-item category-box reveal-element" data-cat="tecnicaMista">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-container">
+                                <picture>
+                                    <source srcset="fotoOpere/tecnicaMista/copertinaTecMista.webp" type="image/webp">
+                                    <img src="fotoOpere/tecnicaMista/copertinaTecMista.jpg" alt="Tecnica Mista"
+                                        class="portfolio-img" loading="lazy" width="400" height="300">
+                                </picture>
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-actions">
+                                        <button class="btn-icon btn-zoom"><i class="fa-solid fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-details">
+                                <h3>tecnica mista</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARTE ARTISTICA -->
+            <div class="category-section mt-5">
+                <h3 class="category-section-title">manufatti e creazioni</h3>
+                <div class="category-grid" id="grid-artistica">
+                    <!-- Piccoli manufatti in legno -->
+                    <div class="portfolio-item category-box reveal-element" data-cat="manufattiLegno">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-container">
+                                <picture>
+                                    <source srcset="fotoOpere/manufattiLegno/copertinaManufatti.webp" type="image/webp">
+                                    <img src="fotoOpere/manufattiLegno/copertinaManufatti.jpg"
+                                        alt="Piccoli manufatti in legno" class="portfolio-img" loading="lazy" width="400" height="300">
+                                </picture>
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-actions">
+                                        <button class="btn-icon btn-zoom"><i class="fa-solid fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-details">
+                                <h3>piccoli manufatti in legno</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gadget e portachiavi -->
+                    <div class="portfolio-item category-box reveal-element" data-cat="gadget">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-container">
+                                <picture>
+                                    <source srcset="fotoOpere/gadget/copertinaGadget.webp" type="image/webp">
+                                    <img src="fotoOpere/gadget/copertinaGadget.jpg" alt="Gadget e portachiavi"
+                                        class="portfolio-img" loading="lazy" width="400" height="300">
+                                </picture>
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-actions">
+                                        <button class="btn-icon btn-zoom"><i class="fa-solid fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-details">
+                                <h3>gadget e portachiavi</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Arredo e design -->
+                    <div class="portfolio-item category-box reveal-element" data-cat="arredo">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img-container">
+                                <picture>
+                                    <source srcset="fotoOpere/arredo/copertinaArredo.webp" type="image/webp">
+                                    <img src="fotoOpere/arredo/copertinaArredo.jpg" alt="Arredo e design"
+                                        class="portfolio-img" loading="lazy" width="400" height="300">
+                                </picture>
+                                <div class="portfolio-overlay">
+                                    <div class="overlay-actions">
+                                        <button class="btn-icon btn-zoom"><i class="fa-solid fa-eye"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-details">
+                                <h3>arredo e design</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEZIONE WIP (WORK IN PROGRESS) -->
+    <section id="wip" class="wip-section section-with-bg bg-lines-grid">
+        <div class="wip-bg-glow"></div>
+        <div class="wip-bg-particles" id="wip-particles"></div>
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Dietro le quinte</span>
+                <h2 class="section-title">Nel mio laboratorio</h2>
+                <p class="section-desc-wip">Qui ti porto direttamente sul mio banco da lavoro. Scopri come nascono le
+                    mie creazioni.</p>
+                <div class="divider"><span></span></div>
+            </div>
+
+            <div class="wip-showcase">
+                <!-- Dispositivo Mockup (Cornice del Quadro) -->
+                <div class="wip-device-wrapper">
+                    <!-- Floating aesthetic badges -->
+                    <div class="floating-badge badge-1">
+                        <i class="fa-solid fa-paint-roller"></i>
+                        <span>Acrilico</span>
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                        <span>In corso</span>
+                    </div>
+
+                    <div class="art-frame">
+                        <div class="video-container" id="wip-video-carousel">
+
+                            <!-- Video 1 -->
+                            <div class="carousel-slide active" data-title="Creazione in Laboratorio"
+                                data-desc="Tutto inizia da qui: studio le proporzioni e modello i primi volumi. È la fase in cui l'opera inizia a prendere forma dal nulla. Una preparazione curata nei minimi dettagli è il segreto per dare solidità e forza all'intero lavoro. In questo video vedi proprio i primi istanti della creazione."
+                                data-tag="Lavorazione">
+                                <video muted playsinline preload="none" class="carousel-video">
+                                    <source src="img/IMG_8139.MOV" type="video/mp4">
+                                </video>
+                            </div>
+
+                            <!-- Video 2 -->
+                            <div class="carousel-slide" data-title="Dettagli e Finiture"
+                                data-desc="Questa è la fase della pazienza: rifinisco a mano le texture prima di passare al colore. Mi concentro su ogni dettaglio, levigando o esaltando le piccole irregolarità della materia. È un momento quasi meditativo, dove l'opera inizia davvero a svelare il suo carattere."
+                                data-tag="Dettagli">
+                                <video muted playsinline preload="none" class="carousel-video">
+                                    <source src="img/IMG_8140.MOV" type="video/mp4">
+                                </video>
+                            </div>
+
+                            <!-- Frecce di Navigazione -->
+                            <button class="carousel-arrow prev-arrow" id="wip-prev" aria-label="Video precedente"><i
+                                    class="fa-solid fa-chevron-left"></i></button>
+                            <button class="carousel-arrow next-arrow" id="wip-next" aria-label="Video successivo"><i
+                                    class="fa-solid fa-chevron-right"></i></button>
+
+                            <!-- Indicatore Dots -->
+                            <div class="carousel-dots" id="wip-dots"></div>
+
+                            <!-- Mute Toggle -->
+                            <button class="mute-toggle-btn" id="wip-mute-toggle"
+                                aria-label="Attiva o disattiva audio"><i class="fa-solid fa-volume-xmark"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info (Senza Playlist) -->
+                <div class="wip-info-wrapper center-info">
+                    <div class="wip-current-details large-details">
+                        <div class="wip-card-header">
+                            <span class="video-tag-inline" id="wip-current-tag">Lavorazione</span>
+                            <div class="live-indicator">
+                                <span class="pulsing-dot"></span> In Riproduzione
+                            </div>
+                        </div>
+                        <h3 id="wip-current-title">Creazione in Laboratorio</h3>
+
+                        <!-- Nuove Meta Stats -->
+                        <div class="wip-meta-stats">
+                            <div class="meta-stat">
+                                <span class="stat-icon"><i class="fa-solid fa-palette"></i></span>
+                                <div class="stat-text">
+                                    <span class="stat-label">Tecnica</span>
+                                    <span class="stat-value" id="wip-stat-tecnica">Mista / Acrilico</span>
+                                </div>
+                            </div>
+                            <div class="meta-stat">
+                                <span class="stat-icon"><i class="fa-solid fa-expand"></i></span>
+                                <div class="stat-text">
+                                    <span class="stat-label">Supporto</span>
+                                    <span class="stat-value" id="wip-stat-supporto">Tela 100x120 cm</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="desc-box">
+                            <i class="fa-solid fa-quote-left quote-icon"></i>
+                            <p id="wip-current-desc" class="large-desc">Tutto inizia da qui: studio le proporzioni e
+                                modello i primi volumi.</p>
+                        </div>
+                        <div class="progress-bar-container mt-4" id="wip-progress-container">
+                            <div class="progress-bar" id="wip-progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Biografia & Storia -->
+    <section id="biografia" class="bio-section">
+        <div class="section-container">
+            <div class="bio-grid">
+                <div class="bio-visual">
+                    <div class="portrait-wrapper">
+                        <div class="portrait-glow"></div>
+                        <div class="portrait-container reveal-element">
+                            <picture>
+                                <source srcset="assets/storia.webp" type="image/webp">
+                                <img src="assets/storia.jpeg" alt="Ritratto di Marco La Spada Artist nel suo laboratorio"
+                                    class="bio-img" loading="lazy" width="380" height="440">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="bio-content">
+                    <span class="section-subtitle">Chi sono</span>
+                    <h2 class="section-title-left">La mia storia</h2>
+                    <div class="divider-left"><span></span></div>
+
+                    <p class="bio-text">
+                        Mi chiamo Marco La Spada, sono nato a Biella nel 1991. Mi esprimo principalmente attraverso la
+                        pittura, ma realizzo anche piccoli manufatti in legno, unendo tecniche e materiali diversi in un
+                        percorso di continua sperimentazione. Prediligo l’acrilico, che spesso affianco a vernici,
+                        resine e altri materiali, sperimentando tecniche e combinazioni diverse.
+                    </p>
+
+                    <!-- Timeline di Esperienze & Collaborazioni -->
+                    <div class="timeline">
+                        <div class="timeline-item reveal-element">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">L'Inizio</span>
+                            <h4>Il legame con l'arte</h4>
+                            <p>Il mio legame con l’arte affonda le radici nell’infanzia. Mio nonno, pittore, è stato la
+                                prima figura a trasmettermi il valore della creatività. È scomparso quando avevo sei
+                                anni e la sua passione per la pittura continua ancora oggi a ispirare il mio percorso
+                                artistico.</p>
+                        </div>
+                        <div class="timeline-item reveal-element">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">Radici e Manualità</span>
+                            <h4>Il lavoro con il legno</h4>
+                            <p>Anche il lavoro con il legno nasce da ricordi d’infanzia. Crescendo in una piccola
+                                frazione del Biellese, passavo le giornate all’aperto con gli altri bambini e mio padre
+                                ci insegnava a costruire da soli i nostri giochi — carretti, fionde e piccoli oggetti
+                                fatti con le mani — proprio come faceva lui quando era bambino. Da quelle esperienze ho
+                                imparato il valore del fare, della materia e dell’ingegno.</p>
+                        </div>
+                        <div class="timeline-item reveal-element">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">Oggi</span>
+                            <h4>L'eredità artistica</h4>
+                            <p>Oggi porto con me entrambe queste eredità: la sensibilità per l’espressione artistica e
+                                il piacere della manualità. Ogni mio lavoro nasce dall’incontro tra memoria,
+                                sperimentazione e desiderio di trasformare idee ed emozioni in qualcosa di concreto e
+                                autentico.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Pronta Consegna -->
+    <section id="pronta-consegna" class="ready-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Opere disponibili</h2>
+                <p class="section-desc-wip">Qui trovi le mie creazioni originali e i manufatti già finiti, pronti per
+                    essere spediti o ritirati direttamente nel mio studio.</p>
+                <div class="divider"><span></span></div>
+            </div>
+
+            <div class="premium-storefront">
+
+                <!-- Left: 3D Catalog Visual -->
+                <div class="storefront-catalog">
+                    <div class="catalog-3d-wrapper">
+                        <div class="catalog-glow"></div>
+                        <div class="catalog-book">
+                            <div class="catalog-cover">
+                                <div class="cover-content">
+                                    <picture>
+                                        <source srcset="assets/logo.webp" type="image/webp">
+                                        <img src="assets/logo.png" alt="Logo Marco La Spada Artist" class="cover-icon" width="50" height="50">
+                                    </picture>
+                                    <h3>Catalogo Opere</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-actions">
+                        <p class="catalog-info">Scarica il PDF per sfogliare tutte le opere attualmente disponibili e
+                            trovare quella perfetta per te.</p>
+                        <a href="file/Catalogo_Opere_Arte.pdf" download class="btn btn-primary-gradient btn-large">
+                            <i class="fa-solid fa-download"></i> Scarica il mio catalogo (PDF)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Minimalist Fast Track Form -->
+                <div class="storefront-quick-buy">
+                    <div class="quick-buy-header">
+                        <h3><i class="fa-solid fa-bolt"></i> Vuoi prenotare un'opera?</h3>
+                        <p>Hai visto un'opera nel catalogo che ti ha colpito? Scrivimi subito per prenotarla prima che
+                            lo faccia qualcun altro.</p>
+                    </div>
+
+                    <form id="fast-track-form" action="https://formsubmit.co/marcolaspadaartist@gmail.com" method="POST"
+                        class="floating-form">
+                        <input type="hidden" name="_subject" value="Prenotazione Opera Pronta Consegna">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <div class="floating-group">
+                            <input type="text" id="ft-name" name="name" required placeholder=" ">
+                            <label for="ft-name">Nome e Cognome *</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="floating-group">
+                            <input type="email" id="ft-email" name="email" required placeholder=" ">
+                            <label for="ft-email">La tua E-mail *</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="floating-group">
+                            <input type="text" id="ft-artwork" name="artwork_name" required placeholder=" ">
+                            <label for="ft-artwork">Nome dell'Opera (dal catalogo) *</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="floating-group">
+                            <textarea id="ft-message" name="message" rows="3" placeholder=" "></textarea>
+                            <label for="ft-message">Messaggio (Opzionale)</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Invia Richiesta Esclusiva <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Contatti -->
+    <section id="contatti" class="contacts-section section-with-bg bg-lines-grid">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Lavoriamo insieme</span>
+                <h2 class="section-title">Raccontami la tua idea</h2>
+                <div class="divider"><span></span></div>
+            </div>
+
+            <div class="contacts-grid">
+
+                <!-- Informazioni di Contatto e Social -->
+                <div class="contacts-info-wrapper">
+                    <div class="info-card">
+                        <h3>Dati di Contatto</h3>
+                        <p>Vuoi commissionarmi un quadro, un murales per il tuo locale o un gadget personalizzato?
+                            Scrivimi
+                            o chiamami senza impegno. Ti risponderò io personalmente entro 24 ore per capire come posso
+                            aiutarti.</p>
+
+                        <div class="contact-links">
+                            <div class="contact-link-item">
+                                <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <span>E-mail</span>
+                                    <a href="mailto:marcolaspadaartist@gmail.com"
+                                        class="email-placeholder">marcolaspadaartist@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-link-item">
+                                <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <span>Telefono / WhatsApp</span>
+                                    <a href="tel:+393341061973">+39 334 1061973</a>
+                                </div>
+                            </div>
+                            <div class="contact-link-item">
+                                <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <span>Studio & Zona Operativa</span>
+                                    <p>Provincia di Biella, disponibile per trasferte.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links-wrapper">
+                            <span>Seguimi su Instagram e TikTok per vedere cosa sto creando oggi nel mio
+                                laboratorio:</span>
+                            <div class="social-icons">
+                                <a href="https://www.instagram.com/marco_artist_/" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon instagram" aria-label="Segui Marco La Spada su Instagram">
+                                    <i class="fa-brands fa-instagram"></i> @marco_artist_
+                                </a>
+                                <a href="https://www.tiktok.com/@marco_artist_" target="_blank" rel="noopener noreferrer"
+                                    class="social-icon tiktok" aria-label="Segui Marco La Spada su TikTok">
+                                    <i class="fa-brands fa-tiktok"></i> @marco_artist_
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Colonna 1: Brand -->
+                <div class="footer-col brand-col">
+                    <a href="#" class="logo" aria-label="Torna in cima">
+                        <picture>
+                            <source srcset="assets/logo.webp" type="image/webp">
+                            <img src="assets/logo.png" alt="Marco La Spada Artist Logo" class="brand-logo-img" width="40" height="40">
+                        </picture>
+                        MARCO LA SPADA <span>ARTIST</span>
+                    </a>
+                    <p>Dò forma alle tue idee attraverso opere d'arte uniche, create a mano con cura, tempo e passione.
+                    </p>
+                    <div class="social-icons footer-social">
+                        <a href="https://www.instagram.com/marco_artist_/" target="_blank" rel="noopener noreferrer" class="social-icon instagram"
+                            aria-label="Instagram di Marco La Spada">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@marco_artist_" target="_blank" rel="noopener noreferrer" class="social-icon tiktok"
+                            aria-label="TikTok di Marco La Spada">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="mailto:marcolaspadaartist@gmail.com" class="social-icon" aria-label="Invia email a Marco La Spada">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Colonna 2: Navigazione -->
+                <div class="footer-col">
+                    <h4>Esplora</h4>
+                    <ul class="footer-links">
+                        <li><a href="#portfolio">Le mie Opere</a></li>
+                        <li><a href="#wip">Work in Progress</a></li>
+                        <li><a href="#biografia">La mia Storia</a></li>
+                        <li><a href="#pronta-consegna">Pronta Consegna</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonna 3: Legale e Info -->
+                <div class="footer-col">
+                    <h4>Informazioni Legali</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="legal-link" data-target="privacy">Privacy Policy</a></li>
+                        <li><a href="#" class="legal-link" data-target="cookie">Cookie Policy</a></li>
+                        <li><a href="#" class="legal-link" data-target="termini">Termini & Condizioni</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Marco La Spada Artist. Tutti i diritti riservati.</p>
+                <div class="legal-info">
+                    <p>Sede Operativa: Provincia di Biella, Italia</p>
+                    <p>Partita IVA: 02792530020</p>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.85rem; color: var(--text-secondary);">
+                    Powered By <a href="https://dainty-bavarois-e5ed30.netlify.app/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-gold); text-decoration: none; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">Principal Sites</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- POPUP PREVENTIVO (MODAL A PASSAGGI) -->
+    <div class="modal-backdrop" id="quote-modal">
+        <div class="modal-card">
+            <button type="button" class="modal-close" id="close-quote-modal" aria-label="Chiudi preventivo"><i class="fa-solid fa-xmark"></i></button>
+
+            <div class="modal-header-info">
+                <h3>Richiedi un Preventivo</h3>
+                <p>Raccontami la tua idea. Riceverai una stima di tempi e costi personalizzata.</p>
+
+                <!-- Progress bar del form -->
+                <div class="form-steps-indicator">
+                    <span class="step-dot active" data-step="1">1</span>
+                    <span class="step-line"></span>
+                    <span class="step-dot" data-step="2">2</span>
+                    <span class="step-line"></span>
+                    <span class="step-dot" data-step="3">3</span>
+                </div>
+            </div>
+
+            <!-- Form preventivo -->
+            <form id="quote-form" action="https://formsubmit.co/marcolaspadaartist@gmail.com" method="POST"
+                enctype="multipart/form-data">
+                <input type="hidden" name="_subject" value="Nuova Richiesta Preventivo">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <!-- STEP 1: Contatti -->
+                <div class="form-step active" id="step-1">
+                    <h4 class="step-title">I tuoi Contatti</h4>
+                    <div class="form-group">
+                        <label for="name">Nome e Cognome *</label>
+                        <input type="text" id="name" name="name" required placeholder="Es. Mario Rossi">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Tua Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="Es. mario.rossi@email.it">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefono / WhatsApp (Opzionale)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Es. +39 345 6789012">
+                    </div>
+                    <div class="step-buttons">
+                        <button type="button" class="btn btn-primary btn-next-step" aria-label="Vai al passo successivo">Avanti <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Dettagli dell'opera -->
+                <div class="form-step" id="step-2">
+                    <h4 class="step-title">Dettagli dell'Opera</h4>
+
+                    <div class="form-group">
+                        <label for="category">Categoria Opera *</label>
+                        <select id="category" name="category" required>
+                            <option value="" disabled selected>Seleziona una categoria...</option>
+                            <option value="ritratto-bn-persone">persone</option>
+                            <option value="ritratto-bn-animali">animali</option>
+                            <option value="quadro-colori">quadri a colori</option>
+                            <option value="murales-pareti">pareti interno/esterno</option>
+                            <option value="tecnica-mista">tecnica mista</option>
+                            <option value="legno">piccoli manufatti in legno</option>
+                            <option value="gadget">gadget e portachiavi</option>
+                            <option value="arredo-design">arredo e design</option>
+                            <option value="altro">Altro (Specifica nei dettagli)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dimensions">Dimensioni Approssimative (Es. 50x70 cm, 3x4 metri per pareti) *</label>
+                        <input type="text" id="dimensions" name="dimensions" required
+                            placeholder="Es. 50x70 cm o misura parete">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Descrivi la tua idea / Dettagli del progetto *</label>
+                        <textarea id="details" name="details" rows="4" required
+                            placeholder="Descrivi il soggetto, i colori preferiti, il supporto desiderato..."></textarea>
+                    </div>
+
+                    <div class="form-group file-upload-group">
+                        <label for="attachment">Allega un'immagine o file di esempio (Opzionale)</label>
+                        <input type="file" id="attachment" name="attachment" accept="image/*,.pdf"
+                            class="file-input-styled">
+                    </div>
+
+                    <div class="step-buttons">
+                        <button type="button" class="btn btn-secondary btn-prev-step" aria-label="Torna al passo precedente"><i class="fa-solid fa-arrow-left"></i> Indietro</button>
+                        <button type="button" class="btn btn-primary btn-next-step" aria-label="Vai al passo successivo">Avanti <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Conferma e Invio -->
+                <div class="form-step" id="step-3">
+                    <h4 class="step-title">Riepilogo e Invio</h4>
+
+                    <div class="summary-box" id="form-summary">
+                        <!-- Caricato dinamicamente via JS -->
+                    </div>
+
+                    <div class="form-group-checkbox">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">Ho letto la <a href="#" class="legal-link" data-target="privacy"
+                                style="color: var(--accent-gold); text-decoration: underline;">Privacy Policy</a> e
+                            acconsento al trattamento dei dati personali per il preventivo *</label>
+                    </div>
+
+                    <!-- Input nascosto per salvare le info dell'opera originaria se prenotata da card -->
+                    <input type="hidden" id="source_item" name="source_item" value="">
+
+                    <div class="step-buttons">
+                        <button type="button" class="btn btn-secondary btn-prev-step" aria-label="Torna al passo precedente"><i class="fa-solid fa-arrow-left"></i> Indietro</button>
+                        <div class="submit-wrapper">
+                            <button type="submit" class="btn btn-primary-gradient" id="submit-btn"><i
+                                    class="fa-solid fa-paper-plane"></i> Invia Richiesta</button>
+                            <p class="submit-microcopy"><i class="fa-solid fa-clock"></i> Risposta garantita entro 24h
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Schermata di successo dell'invio (Nasconde il form dopo l'invio riuscito) -->
+            <div class="success-screen" id="success-screen">
+                <div class="success-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3>Richiesta Inviata!</h3>
+                <p>Grazie per avermi contattato. Ho ricevuto i dettagli del tuo preventivo e ti risponderò al più presto
+                    sulla tua e-mail.</p>
+                <button class="btn btn-primary" id="btn-success-close">Chiudi Finestra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LEGAL MODAL -->
+    <div class="modal-backdrop" id="legal-modal">
+        <div class="modal-card" style="max-width: 800px; max-height: 90vh; display: flex; flex-direction: column;">
+            <button type="button" class="modal-close" id="close-legal-modal" aria-label="Chiudi informazioni legali"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header-info" style="margin-bottom: 20px;">
+                <h3 id="legal-modal-title">Privacy Policy</h3>
+            </div>
+            <div class="legal-content" id="legal-content"
+                style="overflow-y: auto; padding-right: 15px; text-align: left; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">
+
+                <div id="legal-privacy" class="legal-tab" style="display:none;">
+                    <h4 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">Identità e dati di
+                        contatto del Titolare del trattamento</h4>
+                    <p>Il Titolare del trattamento è:<br>
+                        - <strong>Ragione Sociale/Nome:</strong> Marco Artist<br>
+                        - <strong>Sede Operativa:</strong> Provincia di Biella, Italia<br>
+                        - <strong>P.IVA:</strong> IT12345678901<br>
+                        - <strong>Email:</strong> info@marcoartist.it<br>
+                        - <strong>Telefono:</strong> +39 334 1061973</p>
+
+                    <h4 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">Tipologie di dati
+                        raccolti</h4>
+                    <p>Dati forniti volontariamente tramite moduli di contatto (nome, email, richieste) e dati tecnici
+                        raccolti automaticamente dal server (hosting Netlify) per il funzionamento della piattaforma e
+                        la sicurezza.</p>
+
+                    <h4 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">Finalità e Base
+                        giuridica</h4>
+                    <p>I dati sono trattati esclusivamente per rispondere alle richieste di preventivo e informazioni
+                        (esecuzione di misure precontrattuali - Art. 6, lett. b GDPR) e per garantire la corretta
+                        erogazione dei servizi sul web.</p>
+
+                    <h4 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">Comunicazione a terzi
+                    </h4>
+                    <p>I dati non sono in alcun modo diffusi o venduti. Possono essere processati esclusivamente da
+                        fornitori tecnici essenziali come Formspree Inc. (per la trasmissione sicura delle email dal
+                        form di contatto al titolare) e Netlify (per l'infrastruttura web).</p>
+
+                    <h4 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">Diritti degli
+                        interessati</h4>
+                    <p>Ai sensi degli artt. 15-22 del Regolamento UE 2016/679, l'utente ha il diritto di chiedere
+                        l'accesso, la rettifica, la cancellazione ("diritto all'oblio"), o la limitazione del
+                        trattamento dei propri dati inviando una comunicazione a info@marcoartist.it, nonché il diritto
+                        di proporre reclamo al Garante Privacy.</p>
+                </div>
+
+                <div id="legal-cookie" class="legal-tab" style="display:none;">
+                    <h4 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">Cosa sono i Cookie
+                    </h4>
+                    <p>I cookie sono stringhe di testo di piccole dimensioni che i siti visitati dall'utente inviano al
+                        suo terminale, dove vengono memorizzati per essere poi ritrasmessi agli stessi siti alla
+                        successiva visita.</p>
+
+                    <h4 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">Cookie utilizzati su
+                        questo sito</h4>
+                    <p>Questo sito web fa uso <strong>esclusivamente di Cookie Tecnici</strong>, necessari per
+                        permettere la corretta navigazione del sito e il funzionamento dei moduli di contatto. Per la
+                        loro installazione non è richiesto il preventivo consenso dell'utente, in ottemperanza alle
+                        direttive europee e alle Linee Guida del Garante Privacy italiano.</p>
+                    <ul style="margin-top: 10px; margin-left: 20px;">
+                        <li><strong>Nessun Analytics:</strong> Questo sito NON usa Google Analytics o altri sistemi di
+                            tracciamento statistico.</li>
+                        <li><strong>Nessun Marketing/Pixel:</strong> Questo sito NON usa Meta Pixel o cookie
+                            pubblicitari a scopo di retargeting.</li>
+                        <li><strong>Nessun Social Widget:</strong> I bottoni social (es. Instagram, Email) sono semplici
+                            link in uscita e non installano cookie sul terminale dell'utente.</li>
+                    </ul>
+
+                    <h4 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">Gestione del Consenso
+                    </h4>
+                    <p>Poiché il sito utilizza esclusivamente cookie tecnici essenziali, la legge non prevede l'obbligo
+                        di mostrare un "cookie banner" bloccante (con tasti accetta/rifiuta) né di tenere un registro
+                        dei consensi. L'utente può comunque disabilitare i cookie tecnici agendo direttamente sulle
+                        impostazioni di privacy del proprio browser.</p>
+                </div>
+
+                <div id="legal-termini" class="legal-tab" style="display:none;">
+                    <h4 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">1. Proprietà
+                        Intellettuale</h4>
+                    <p>Tutti i contenuti presenti sul sito (fotografie delle opere, video in lavorazione, grafiche,
+                        testi, logo "Marco Artist") sono protetti dalle leggi sul diritto d'autore e sono di proprietà
+                        esclusiva di Marco Artist. È severamente vietata la riproduzione, copia o utilizzo commerciale
+                        dei contenuti senza esplicita autorizzazione scritta del titolare.</p>
+
+                    <h4 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">2. Esattezza delle
+                        informazioni</h4>
+                    <p>Le immagini delle opere mostrate sul sito hanno scopo puramente illustrativo del portfolio
+                        artistico. Le tempistiche di realizzazione, le disponibilità di opere in pronta consegna o i
+                        dettagli esatti per i progetti su commissione (murales, quadri) verranno discussi e formalizzati
+                        esclusivamente in sede di preventivo privato.</p>
+
+                    <h4 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">3. Utilizzo del
+                        Modulo Contatti</h4>
+                    <p>L'utente si impegna a non utilizzare il modulo di contatto per l'invio di messaggi spam o
+                        materiale illecito. Inviando descrizioni o materiali grafici di riferimento (es. foto per
+                        l'ispirazione di un ritratto) tramite il modulo, l'utente garantisce di possedere i diritti per
+                        trasmetterli e manleva Marco Artist da qualsiasi rivendicazione di terzi sul diritto d'autore.
+                    </p>
+
+                    <h4 style="color: var(--text-primary); margin-top: 20px; margin-bottom: 10px;">4. Legge applicabile
+                        e Foro competente</h4>
+                    <p>I presenti Termini sono regolati dalla Legge Italiana. Per qualsiasi controversia derivante
+                        dall'utilizzo del sito che non possa essere risolta amichevolmente, sarà competente in via
+                        esclusiva il Foro di Biella, fatti salvi i fori inderogabili previsti dalla normativa in favore
+                        della tutela del consumatore.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- CATEGORY MODAL -->
+    <div class="lightbox-backdrop" id="category-modal">
+        <div class="lightbox-content category-lightbox">
+            <button type="button" class="lightbox-close" id="close-category-modal" aria-label="Chiudi galleria"><i class="fa-solid fa-xmark"></i></button>
+
+            <div class="category-modal-header">
+                <h2 id="modal-category-title">Categoria</h2>
+            </div>
+
+            <div class="category-modal-body">
+                <!-- Colonna Sinistra: Navigazione e Immagini -->
+                <div class="modal-left-col">
+                    <div class="artwork-nav">
+                        <button class="artwork-nav-btn prev-artwork" id="prev-artwork"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <div class="artwork-display">
+                            <!-- Carosello automatico per le foto della singola opera -->
+                            <div class="artwork-carousel">
+                                <div class="carousel-images" id="carousel-images">
+                                    <!-- Le immagini vengono caricate via JS -->
+                                </div>
+
+                                <button class="carousel-play-pause" id="carousel-play-pause">
+                                    <i class="fa-solid fa-pause"></i>
+                                </button>
+
+                                <!-- Barra di progresso scorrevole per la durata dell'immagine -->
+                                <div class="carousel-progress-bar">
+                                    <div class="progress-fill" id="carousel-progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="artwork-nav-btn next-artwork" id="next-artwork"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Colonna Destra: Informazioni -->
+                <div class="modal-right-col">
+                    <div class="artwork-counter" id="artwork-counter">Opera 1 di X</div>
+                    <h3 id="artwork-title">Titolo dell'Opera</h3>
+                    <p id="artwork-desc">Descrizione dell'opera...</p>
+                    <button class="btn btn-primary btn-quote-trigger" id="category-quote-btn"><i
+                            class="fa-solid fa-file-invoice-dollar"></i> Chiedi preventivo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>
