@@ -339,9 +339,17 @@ h1, h2, h3, h4 {
     border-radius: 50%;
     margin-right: 12px;
     border: 2px solid var(--accent-gold);
+    flex-shrink: 0;
 }
 
-.logo span {
+.logo-text {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.logo-subtitle {
     color: var(--accent-gold);
     font-weight: 300;
 }
@@ -432,20 +440,20 @@ h1, h2, h3, h4 {
 }
 
 .hero-container {
-    max-width: var(--max-width);
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 24px 60px;
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 60px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
 }
 
 .hero-tag {
@@ -767,6 +775,7 @@ h1, h2, h3, h4 {
     position: relative;
     overflow: hidden;
     aspect-ratio: 4 / 3;
+    width: 100%;
 }
 
 .portfolio-img-container picture {
@@ -1346,8 +1355,7 @@ h1, h2, h3, h4 {
 .bio-visual {
     display: flex;
     justify-content: center;
-    position: sticky;
-    top: calc(50vh - 220px); /* Questo fa in modo che rimanga fissa al centro dello schermo (verticalmente) */
+    position: relative;
     align-self: start;
 }
 
@@ -2389,7 +2397,7 @@ footer {
         font-size: 2.2rem;
     }
     
-    .wip-grid {
+    .wip-showcase, .wip-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
@@ -2442,6 +2450,14 @@ footer {
     background: radial-gradient(circle, rgba(157, 78, 221, 0.05) 0%, transparent 60%);
     z-index: 0;
     pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .premium-storefront {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 40px;
+    }
 }
 
 .storefront-catalog, .storefront-quick-buy {
@@ -2810,6 +2826,7 @@ footer {
     position: relative;
 }
 
+.carousel-images picture,
 .carousel-images img {
     height: 100%;
     width: 100%;
@@ -2817,13 +2834,15 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
-    transition: opacity 0.5s ease;
 }
 
-.carousel-images img.active {
-    opacity: 1;
+.carousel-images picture.active {
     z-index: 2;
+}
+
+/* Ensure img inside picture doesn't double-apply absolute if picture is used */
+.carousel-images picture img {
+    position: relative;
 }
 
 .carousel-progress-bar {
