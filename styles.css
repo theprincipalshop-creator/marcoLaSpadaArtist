@@ -440,20 +440,20 @@ h1, h2, h3, h4 {
 }
 
 .hero-container {
-    max-width: 800px;
+    max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 24px 60px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
     align-items: center;
-    text-align: center;
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .hero-tag {
@@ -2322,7 +2322,8 @@ footer {
     }
     
     .bio-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
         gap: 50px;
     }
     
@@ -2526,6 +2527,10 @@ footer {
 .cover-content {
     text-align: center;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .cover-content h3 {
@@ -2614,6 +2619,7 @@ footer {
     font-size: 1rem;
     pointer-events: none;
     transition: 0.3s ease;
+    white-space: nowrap;
 }
 
 .floating-group input:focus, .floating-group textarea:focus {
@@ -2753,6 +2759,12 @@ footer {
 @media (max-width: 992px) {
     .category-modal-body {
         grid-template-columns: 1fr;
+        overflow-y: auto;
+        max-height: 80vh;
+    }
+    .modal-right-col {
+        /* Make description visible below image on mobile */
+        justify-content: flex-start;
     }
 }
 
@@ -2944,5 +2956,45 @@ footer {
     
     .artwork-display {
         height: 40vh;
+        min-height: 240px;
+    }
+
+    /* On mobile, make category modal scrollable so description is reachable */
+    .category-lightbox .modal-card {
+        padding: 16px;
+        max-height: 95vh;
+        overflow-y: auto;
+    }
+
+    .category-modal-body {
+        grid-template-columns: 1fr;
+        overflow-y: visible;
+    }
+
+    #artwork-desc {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    /* Contacts: prevent horizontal overflow */
+    .info-card {
+        padding: 24px 16px;
+        overflow: hidden;
+    }
+
+    .contact-link-item a {
+        font-size: 0.9rem;
+        word-break: break-all;
+    }
+
+    /* Catalog logo center fix */
+    .catalog-3d-wrapper {
+        width: 200px;
+        height: 270px;
+    }
+
+    /* Floating label: smaller font so it fits on narrow screens */
+    .floating-group label {
+        font-size: 0.9rem;
     }
 }
