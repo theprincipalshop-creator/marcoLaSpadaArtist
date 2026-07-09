@@ -406,9 +406,97 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==========================================================================
+    // 4b. IMAGE LIGHTBOX FULLSCREEN
+    // ==========================================================================
+    const imgLightbox        = document.getElementById('img-lightbox');
+    const imgLightboxImg     = document.getElementById('img-lightbox-img');
+    const imgLightboxClose   = document.getElementById('img-lightbox-close');
+    const imgLightboxPrev    = document.getElementById('img-lightbox-prev');
+    const imgLightboxNext    = document.getElementById('img-lightbox-next');
+    let lightboxImages = [];
+    let lightboxIndex  = 0;
+
+    function openImgLightbox(images, startIndex) {
+        lightboxImages = images;
+        lightboxIndex  = startIndex;
+        updateLightboxImage();
+        imgLightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeImgLightbox() {
+        imgLightbox.classList.remove('open');
+        // Restore scroll only if category modal is also closed
+        if (!categoryModal || !categoryModal.classList.contains('open')) {
+            document.body.style.overflow = '';
+        }
+    }
+
+    function updateLightboxImage() {
+        if (!lightboxImages.length) return;
+        const src = lightboxImages[lightboxIndex];
+        imgLightboxImg.style.opacity = '0';
+        imgLightboxImg.style.transform = 'scale(0.96)';
+        // Use WebP src directly (browser falls back automatically)
+        imgLightboxImg.src = src;
+        imgLightboxImg.onload = () => {
+            imgLightboxImg.style.opacity = '1';
+            imgLightboxImg.style.transform = 'scale(1)';
+        };
+        // Show/hide nav arrows
+        imgLightboxPrev.style.display = lightboxImages.length > 1 ? 'flex' : 'none';
+        imgLightboxNext.style.display = lightboxImages.length > 1 ? 'flex' : 'none';
+    }
+
+    // Click on the carousel area → open lightbox at current photo
+    if (carouselImages) {
+        carouselImages.addEventListener('click', () => {
+            if (!currentCategoryData) return;
+            const artwork = currentCategoryData.artworks[currentArtworkIndex];
+            openImgLightbox(artwork.images, currentPhotoIndex);
+        });
+    }
+
+    // Nav buttons inside lightbox
+    if (imgLightboxPrev) {
+        imgLightboxPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            lightboxIndex = (lightboxIndex - 1 + lightboxImages.length) % lightboxImages.length;
+            updateLightboxImage();
+        });
+    }
+    if (imgLightboxNext) {
+        imgLightboxNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            lightboxIndex = (lightboxIndex + 1) % lightboxImages.length;
+            updateLightboxImage();
+        });
+    }
+
+    // Close on backdrop click (outside image)
+    if (imgLightbox) {
+        imgLightbox.addEventListener('click', (e) => {
+            if (e.target === imgLightbox || e.target.classList.contains('img-lightbox-img-wrap')) {
+                closeImgLightbox();
+            }
+        });
+    }
+    if (imgLightboxClose) imgLightboxClose.addEventListener('click', closeImgLightbox);
+
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && imgLightbox && imgLightbox.classList.contains('open')) {
+            closeImgLightbox();
+        }
+    });
+
+
+
+    // ==========================================================================
     // 5. CUSTOM VIDEO CAROUSEL (WORK IN PROGRESS)
     // ==========================================================================
     const slides = document.querySelectorAll('.carousel-slide');
+
     const prevBtn = document.getElementById('wip-prev');
     const nextBtn = document.getElementById('wip-next');
     const dotsContainer = document.getElementById('wip-dots');
@@ -434,10 +522,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const dots = document.querySelectorAll('.dot');
 
+        const wipStatTecnica = document.getElementById('wip-stat-tecnica');
+        const wipStatSupporto = document.getElementById('wip-stat-supporto');
+
         const updateDetails = (slide) => {
             if(wipCurrentTag) wipCurrentTag.textContent = slide.getAttribute('data-tag');
             if(wipCurrentTitle) wipCurrentTitle.textContent = slide.getAttribute('data-title');
             if(wipCurrentDesc) wipCurrentDesc.textContent = slide.getAttribute('data-desc');
+            if(wipStatTecnica) wipStatTecnica.textContent = slide.getAttribute('data-tecnica') || 'Mista';
+            if(wipStatSupporto) wipStatSupporto.textContent = slide.getAttribute('data-supporto') || 'Varie';
         };
 
         const playVideo = (video) => {

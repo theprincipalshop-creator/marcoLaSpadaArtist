@@ -357,21 +357,36 @@
                     <div class="art-frame">
                         <div class="video-container" id="wip-video-carousel">
 
-                            <!-- Video 1 -->
-                            <div class="carousel-slide active" data-title="Creazione in Laboratorio"
-                                data-desc="Tutto inizia da qui: studio le proporzioni e modello i primi volumi. È la fase in cui l'opera inizia a prendere forma dal nulla. Una preparazione curata nei minimi dettagli è il segreto per dare solidità e forza all'intero lavoro. In questo video vedi proprio i primi istanti della creazione."
-                                data-tag="Lavorazione">
+                            <!-- Video 1: Gatto -->
+                            <div class="carousel-slide active" data-title="Ritratto Animale"
+                                data-desc="In questo video puoi vedere la realizzazione passo dopo passo di un ritratto su tela. Mi concentro in particolar modo sulle sfumature del manto e sull'espressione degli occhi, per restituire l'anima e il carattere dell'animale."
+                                data-tag="Pittura"
+                                data-tecnica="Acrilico"
+                                data-supporto="Tela 50x70 cm">
                                 <video muted playsinline preload="none" class="carousel-video">
-                                    <source src="img/IMG_8139.MOV" type="video/mp4">
+                                    <source src="assets/video/wipGatto.mp4" type="video/mp4">
                                 </video>
                             </div>
 
-                            <!-- Video 2 -->
-                            <div class="carousel-slide" data-title="Dettagli e Finiture"
-                                data-desc="Questa è la fase della pazienza: rifinisco a mano le texture prima di passare al colore. Mi concentro su ogni dettaglio, levigando o esaltando le piccole irregolarità della materia. È un momento quasi meditativo, dove l'opera inizia davvero a svelare il suo carattere."
-                                data-tag="Dettagli">
+                            <!-- Video 2: Portachiavi -->
+                            <div class="carousel-slide" data-title="Manufatto in Legno"
+                                data-desc="Oltre alla pittura, realizzo piccoli oggetti artigianali. Qui mostro la lavorazione di un portachiavi in legno: dall'incisione dei dettagli fino alla finitura superficiale per proteggerne il materiale e risaltarne le venature."
+                                data-tag="Legno"
+                                data-tecnica="Legno / Incisione"
+                                data-supporto="5x10 cm">
                                 <video muted playsinline preload="none" class="carousel-video">
-                                    <source src="img/IMG_8140.MOV" type="video/mp4">
+                                    <source src="assets/video/wipPortachiavi.mp4" type="video/mp4">
+                                </video>
+                            </div>
+
+                            <!-- Video 3: Tommaso -->
+                            <div class="carousel-slide" data-title="Ritratto su Commissione"
+                                data-desc="Tutto inizia dallo studio delle proporzioni. Una preparazione curata nei minimi dettagli è il segreto per dare forza all'intero lavoro. Ecco alcune fasi del ritratto di Tommaso, dove le ombre cominciano a dare tridimensionalità al volto."
+                                data-tag="Lavorazione"
+                                data-tecnica="Matita / Carboncino"
+                                data-supporto="Carta 30x40 cm">
+                                <video muted playsinline preload="none" class="carousel-video">
+                                    <source src="assets/video/wipTommaso.mp4" type="video/mp4">
                                 </video>
                             </div>
 
@@ -1006,8 +1021,21 @@
         </div>
     </div>
 
+
+    <!-- LIGHTBOX FULLSCREEN IMMAGINE -->
+    <div class="img-lightbox-backdrop" id="img-lightbox" role="dialog" aria-modal="true" aria-label="Visualizzazione immagine a schermo intero">
+        <button class="img-lightbox-close" id="img-lightbox-close" aria-label="Chiudi immagine"><i class="fa-solid fa-xmark"></i></button>
+        <button class="img-lightbox-nav prev" id="img-lightbox-prev" aria-label="Immagine precedente"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="img-lightbox-img-wrap">
+            <img id="img-lightbox-img" src="" alt="Opera a schermo intero">
+        </div>
+        <button class="img-lightbox-nav next" id="img-lightbox-next" aria-label="Immagine successiva"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="img-lightbox-hint"><i class="fa-solid fa-magnifying-glass"></i> Clicca fuori o premi ESC per chiudere</div>
+    </div>
+
     <!-- Custom JS -->
     <script src="script.js" defer></script>
+
 </body>
 
 </html>
